@@ -10,7 +10,8 @@
 <body>
     
 </body>
-<script src="./ajax.js"></script>
+<script src="jquery.js"></script>
+<script src="./fetchData.js"></script>
 <script>
  /**
  * 对封装好的ajax请求进行调用
@@ -22,8 +23,9 @@
  * 
  * 针对 拒绝访问 是由于浏览器安全机制导致的，解决方法为点击IE浏览器的的“工具->Internet 选项->安全->自定义级别”将“其他”选项中的“通过域访问数据源”选中为“启用”或者"提示"
  * *****/
-ajax({
-	    url:"", //请求地址
+$.fetchData(
+	{
+	    url:"http://localhost:8001", //请求地址
 	    type:'post',   //请求方式
 	    data:{activeType:"1",cbss_user_id:"1"}, //请求参数
 	    dataType:"json",     // 返回值类型的设定
@@ -35,6 +37,7 @@ ajax({
 	    fail:function (status) {
 	        console.log('失败+++状态码为'+status);   // 此处为执行成功后的代码
 	    }
-});
+	}
+);
 </script>
 </html>
