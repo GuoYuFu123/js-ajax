@@ -10,8 +10,8 @@
 <body>
     
 </body>
-<script src="jquery.js"></script>
-<script src="./fetchData.js"></script>
+<script src="jquery.min.js"></script>
+<script src="./fetchData.min.js"></script>
 <script>
  /**
  * 对封装好的ajax请求进行调用
@@ -25,7 +25,7 @@
  * *****/
 $.fetchData(
 	{
-	    url:"http://localhost:8001", //请求地址
+	    url:"http://localhost:8000/", //请求地址
 	    type:'post',   //请求方式
 	    data:{activeType:"1",cbss_user_id:"1"}, //请求参数
 	    dataType:"json",     // 返回值类型的设定
